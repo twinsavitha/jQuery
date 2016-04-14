@@ -1,0 +1,78 @@
+what is a service
+$http service to communicate with server
+controller communication. 
+
+is what u use to build commom functionality across your application. 
+
+
+best practise: controllers need to be very specific and light weight for the view that they are controlling. 
+
+services can be consumed via dependency injection. where we will inject a service into a controller. 
+
+ services are application singletons... meaning we have 1 service per application. once is not going to be instantiated. allows to maintain constant state across the application. 
+
+services are instantiated lazily. spun up only when needed. helpful when the service is only required in a particular event. so no overhead.
+
+services are registered via a factory and stored in the provider service. and when someone requests a service they will say $injector.get("myservice") and then from there it will check if the service is already instantiated and is in the instance cache.. if it is then the cache will return the service for use in the application. 
+
+if not then it will go to the instance factory to make a new instance and its reference is then stored in the instance cache.
+
+------
+$http service
+is a core angular service that facilitates communication with the remote http servers via the browser's XMLHttpRequest (XHR) object or via JSONP.
+
+the $http API is based on the deferred/promise APIs exposed by the $q service. 
+
+anything defined with $ is an angular service. 
+
+$http shortcut methods (REST)
+
+$http.get
+$http.head
+$http.post
+$http.put
+$http.delete
+$http.jsonp (jsonp to work around cross domain policy issues.
+
+the returned value of calling $http is a promise. 
+is a wa to have a asynchronous callback.
+we can use the "then" method to register callbacks.
+
+when the promise gets fullfilled.. the method defined in the then method get fired. the callbacks recieve a single argument.. an object representing the response. 
+
+
+$http.get('./users.json').sucess(function(users) {
+$scope.users=users;
+}
+
+here in this promise we used sucess instead of then.. because it extracts data from the response.
+
+-----
+Communication with controllers
+
+clear: controllers should not communicate with each other. 
+every scope object. has events baked into it for event broadcasting through event listeners.
+
+$broadcast : sends event downwards to is child scope objects
+$emit: send the event from child to parent.
+$on listens for events and allows u to register a callback or function..
+
+we can use $rootscope as a event bus in services to broadcast events for child scope objects to listen to. reason: if we use the $broadcast on the rootscope.. every scope is under teh rootscope so it will recieve that method. 
+------
+controller 1
+usersService.setCurrentUser(user);
+$rootScope.$broadcast('userChanged');
+
+ctrl 2
+$scope.$on('userChanged', function(event) {
+$scope.currentUser = usersService.getCurrentUser();
+----
+review
+serives is used to contain logic or data that we need to share across the application. 
+$http is used to communicate with remote servers using REST. 
+promises is used by $http servce
+
+comm between controllers using angularjs event bus system. 
+
+
+

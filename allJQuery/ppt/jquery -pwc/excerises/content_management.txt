@@ -1,0 +1,21 @@
+Website:
+	Banking Web Site - Post Login
+
+Page Content:
+	1. Main Header
+		i. 		Logo
+		ii.		Bank name
+	2. Main Navigation Menu
+	3. User Information
+		i.		User Name
+		ii. 	Settings
+		iii. 	Logout
+	4. Account Listing
+		i.		Acc Number
+		ii.		Branch
+		iii.	Last 10 Transactions
+	5. Footer
+		i. 		Mini Menu
+		ii. 	Site Map
+		iii.	Terms and Conditions
+		iv.		Copyright info

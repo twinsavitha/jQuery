@@ -1,0 +1,87 @@
+we have build the chasis of the car.. now time to add some paneling paint and come effects.. 
+
+Views with a template.
+angular directives tour (come with angular),
+layout directives - control layout of the page
+event directives/interactive directives handle interaction from user and pass it to the controller
+styling directives actually does not affect the layout but its styling through dynamic css.
+
+-------
+
+the view is AngularJS compiled DOM.
+The view is a product of $compile merging the HTML template with $scope. 
+DOM is no longer the single source of truth. the state is pulled into the controller and controlled by scope. 
+
+
+<image>
+
+template > compiiled > angularjs view.
+
+between the view and model we have a digest cycle that something happens eg an event ng-click.
+or something happend to the model, eg we get data from the server.. the model forms the view.
+
+-----
+we add module name
+we add controller
+we define the param on scope
+it evaluates to something. 
+-----
+
+Layout Directives
+directives that control teh layout of the page
+ngif
+ngShow/ngHide
+ngRepeat
+ngSwitch
+ngInclude
+
+based on the value of the expression that u bind it to 
+ngif = true/false it will add or remove that element from the DOM. 
+ngShow/ngHide is cousin.. dosent remove.. but make the display = none. its still in the DOM tree.
+
+ngRepeat it takes a collection on scope and for every element defined upon eg div in that collection.. it will create a copy of that element(div) and create a child scope that u can bind to and display. eg an array of user object.. <div ng-repeat " user in users">
+ it will create a div for evey user in that array then us can bind to individual obj.
+{{user.name}}
+
+handy way to do a layout when u just have the collection and u define the template and attach to ng repeat.
+also has a $index which store the count.
+
+$switch where it will attach fragments of html.. based on value of expression..  
+
+nginclude : actually ref to a different template file and asynchronously load and display. similar to ngview but that changes on route change.
+It injects the new template in the element and adds the scope to it. when the template changes.. it duplicates itself (the element) and deletes the older one. 
+
+** anything with an ng- for an attribute dosent need to have expressions becoz the string itself is the expression so we dont need the curly braces.
+
+** ng-include and ng-repeat automatically update the data chain.. so if a value of the element changes . the ng-repeat will also update it automatically.
+similarly if in ng-include the expression changes it will update and download the new template
+
+
+ng-options 
+age for age in generateAges()
+
+-----
+
+Interaction directives
+
+used in view to issue commands and provide value to the controller. 
+
+ngModel - set a value on a form. eg text input used to represent the first name .. ng-model = firstname. thus scope.firstname..
+
+ngBlur/ngFocus - fired when u control focus or blow out. ngblur is used to edit and plce. so if someone edits a form element we can issue a command to the controller to update that value on the server. 
+
+ngClick - button click 
+
+ngSubmit - to submit form to submit by pressing 
+enter. 
+------
+-----------
+styling directives
+
+directives 
+ngClass - based on an expression if will attach or detach a style to a DOM element.dynamically.  ng-class = "{'label-sucess':focus}"
+-------------
+review
+view : html compiled by angular with bindings. 
+
+

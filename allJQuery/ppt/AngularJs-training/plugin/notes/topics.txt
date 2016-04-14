@@ -1,0 +1,6 @@
+1. Hello AngularJS
+2. Module
+3. Controller
+4. View
+5. Services
+6. Directives

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First page</title>
+		<script src="jquery-2.2.1.js"></script>
+		<!--<script src="http://localhost:8080/Desktop/allJQuery/Code/js/application.js"></script>-->
+		<script src="../js/three.js"></script>
+		<!-- <script src="http://localhost:8085/js/two.js"></script> -->
+		<style>
+			.vacation {
+				width: 415px;
+				border-style: solid;
+				border-width : 5px;
+				border-color : #EDB52F;
+			    margin-right: 2px;
+			    margin-left: 2px;
+				color : #FF8E00;
+    			padding-left: 30px;
+    			padding-bottom: 30px;
+    			float: left;
+    			height : 175px;
+    			overflow: auto; /* This ensures that the scroll is given the content increases */
+			}
+			.name {
+				width : 250px;
+			}
+			.many {
+				display : none;
+			}
+			#filters {
+    			padding-left: 1200px;
+			    padding-bottom: 30px;
+			    padding-top: 30px;
+			}
+			.details {
+				display : none;
+			}
+			.high {
+				background-color: #777676 !important; /* without !important the background color does not get overridden. Because the background color was set wen the get price button was clicked */
+			}
+			.ticket , #ajax {
+				 margin:auto;
+  				 display:block;
+    			 margin-top: 375px;
+    			 text-align:center;
+			}
+			.load{
+				background: url('load.png') no-repeat right center;
+			}
+			form {
+				border-style: solid;
+				border-width : 5px;
+				border-color : #EDB52F;
+			    margin-top: 20px;
+			    padding-top: 20px;
+			    padding-bottom: 20px;
+			    padding-left: 20px;
+			}
+			/*
+				This is asked about a dozen times a day. The ID attribute must be unique within your document. You cannot have multiple elements with the same ID. This is undefined behaviour which typically manifests as only the first element being selected (presumably, at the browser level, subsequent duplicate IDs are ignored).
+				1. having many buttons with same ID did not work and then changed them to class.
+			*/
+		</style>
+	</head>
+	<body>
+		<div id = "filters">
+			<button class = "onsale-filter"> on sale </button>
+			<button class = "expiring-filter"> expiring</button>
+		</div>
+
+		<div class = "vacation sale" data-price="399.89">
+			<h1 class="name">Hawaai Vacation</h1>
+			<p class = "details">The state of Hawaii is named after the largest of the islands, located in the south of the archipelago</p>
+			<button class = "amount">GET PRICE</button>
+			<div class="many">
+				<input type="number" class="quantity" value = '1'/>
+				<p>Total price: $<span class ='total'></span></p>
+			</div>
+		</div>
+
+		<div class = "vacation expire" data-price="400.89">
+			<h1 class="name">Erode Vacation</h1>
+			<p class = "details">Erode is a proud participant in the India Smarts Cities Challenge, a competition inspiring innovation in cities to improve the lives of citizens.</p>
+			<button class = "amount">GET PRICE</button>
+			<div class="many">
+				<input type="number" class="quantity" value = '1'/>
+				<p>Total price: $<span class ='total'></span></p>
+			</div>
+		</div>
+		
+		<div class = "vacation sale" data-price="500.89">
+			<h1 class="name">Bangalore Vacation</h1>
+			<p class = "details"> Bangalore the Silicon valley of India is one of the best city for IT professionals. There are a lot of resorts & tourist places near Bangalore to visit.</p>
+			<button class = "amount">GET PRICE</button>
+			<div class="many">
+				<input type="number" class="quantity" value = '1'/>
+				<p>Total price: $<span class ='total'></span></p>
+			</div>
+		</div>
+		<br><br><br>
+
+
+		<div class = "vacation sale" data-price="399.89">
+			<h1 class="name">Hawaai Vacation</h1>
+			<p class = "details">The state of Hawaii is named after the largest of the islands, located in the south of the archipelago</p>
+			<button class = "amount">GET PRICE</button>
+			<div class="many">
+				<input type="number" class="quantity" value = '1'/>
+				<p>Total price: $<span class ='total'></span></p>
+			</div>
+		</div>
+
+		<div class = "vacation expire" data-price="400.89">
+			<h1 class="name">Erode Vacation</h1>
+			<p class = "details">Erode is a proud participant in the India Smarts Cities Challenge, a competition inspiring innovation in cities to improve the lives of citizens.</p>
+			<button class = "amount">GET PRICE</button>
+			<div class="many">
+				<input type="number" class="quantity" value = '1'/>
+				<p>Total price: $<span class ='total'></span></p>
+			</div>
+		</div>
+		
+		<div class = "vacation sale" data-price="500.89">
+			<h1 class="name">Bangalore Vacation</h1>
+			<p class = "details"> Bangalore the Silicon valley of India is one of the best city for IT professionals. There are a lot of resorts & tourist places near Bangalore to visit.</p>
+			<button class = "amount">GET PRICE</button>
+			<div class="many">
+				<input type="number" class="quantity" value = '1'/>
+				<p>Total price: $<span class ='total'></span></p>
+			</div>
+		</div>
+		<br><br><br>
+			<div id = "ajax"></div>
+			<button class = "ticket">Show all Posts</button>
+			<form>
+			  Name: 
+			  <select id="destination" name="destination">
+				  <option value="hawaai">hawaai</option>
+				  <option value="erode">erode</option>
+				  <option value="Bangalore">Bangalore</option>
+			  </select>
+			  <br><br>
+			  Title: <input type="text" id = "quantity" name="quantity" value='1' />
+			  <input type="submit">
+			</form>
+			<button class = "ticket5">GET HTML</button>
+			<button class = "ticket2">GET TEXT</button>
+			<button class = "ticket3">GET JSON</button>
+			<button class = "ticket4">GET XML</button>
+			<div id = "ajaxnew"></div>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+Requirements:
+	1. Two Column Page (2 Sections)
+	2. Breakpoints: (widths)
+		i.		990px and Above
+		ii.		Between 670px and 990px
+		iii.	Below 670px
+	3. Media type can be on of these All, Screen or none.

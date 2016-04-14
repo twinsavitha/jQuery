@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<style>
+		#one {
+			border:solid;
+		}
+	</style>
+	<script>
+	$(document).ready(function(){
+		$("#one").children("h1").text("Changed content");
+		console.log($("p").html());
+		console.log($("#name").val());
+		console.log($("a").attr("href"));
+		$("p").html("New content");
+		$("#name").val("This is my  name");
+		console.log($("#name").val());
+		$("a").attr("href","http://jquery.com");
+		console.log($("a").attr("href"));
+		var node = $("<p>New paragraph</p>");
+		$("#one").before(node);
+		$("#three").empty();
+	});
+	</script>
+</head>
+<body>
+	<div id="one">
+		<h1>This is a header</h1>
+		<p>This is a <b>complicated</b> paragraph</p>
+		<h1>This is a second header</h1>
+		<div class="two">
+			<h1>This is an intergrated header</h1>
+		</div>
+		<h1>This is a third header</h1>
+
+	</div>
+	<h1>This is a fourth header</h1>
+	<input id="name" value="My name" />
+	<a href="http://www.google.com">link</a>
+	<div id="three" style="height:100px;width:300px;border:1px solid black;background-color:yellow">Third div</div>
+</body>
+</html>

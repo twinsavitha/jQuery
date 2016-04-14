@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<style>
+		.one {
+			border:solid;
+		}
+		.highlight {
+			background-color:red;
+		}
+		p, .many {
+			display:none;
+		}
+
+	</style>
+	<script>
+	$(document).ready(function(){
+		$(".one").on("click","button",function(){
+			//var price = $("<p>399.0</p>");
+			var amount = $(this).parent();
+			console.log(amount.data("price"));
+			var price = amount.data("price");
+			$(this).parent().find(".many").show();
+			$(this).parent().find(".total").text(price);
+			//$(this).after(price);
+			$(this).remove();
+		});	
+		$("h1").on("click",function(){
+			$(this).animate({"margin-left":"30px"},"slow");
+			$(this).parent().toggleClass("highlight");
+			$(this).parent().find("p").slideToggle();
+		});
+		$(".quantity").on("keyup",function(){
+			var cost = $(this).closest(".one").data("price");
+			var quantity = $(this).val();
+			$(this).closest(".one").find(".total").text(cost*quantity);
+
+		});
+	});
+
+	</script>
+</head>
+<body>
+	<div class="one" data-price="499.0">
+		<h1>Bangalore Vacation</h1>
+		<p>Bangalore is a silicon city</p>
+		<button>Get Price</button>
+		<div class="many">
+			<input type="number" class="quantity" value='1' />
+			Total Price: <span class="total"></span>
+		</div>
+	</div>
+	<div class="one" data-price="599.0">
+		<h1>Delhi Vacation</h1>
+		<p>Delhi is our capital city</p>
+		<button>Get Price</button>
+		<div class="many">
+			<input type="number" class="quantity" value='1' />
+			Total Price: <span class="total"></span>
+		</div>
+	</div>
+</body>
+</html>

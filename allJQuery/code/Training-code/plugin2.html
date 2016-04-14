@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+	$.fn.getprice = function(){ //4
+			$(this).on("click","button",function(){
+				var price = $(this).parent().data("price");
+				$(this).after(price);
+				$(this).remove();
+			});	
+	};
+	$(document).ready(function(){
+		//2
+		/*
+		$(".one").on("click","button",function(){
+			var price = $(this).parent().data("price");
+			$(this).after(price);
+			$(this).remove();
+		});	
+		*/
+		//2end
+		$(".one").getprice();//5
+		$(".two").getprice();//5
+	});
+	</script>
+</head>
+<body>
+	<div class="one" data-price="499.0"><!-- 1 -->
+		<h1>Bangalore Vacation</h1>
+		<p>Bangalore is a silicon city</p>
+		<button>Get Price</button>
+	</div>
+	<div class="two" data-price="599.0"><!-- 3 -->
+		<h1>Mumbai Vacation</h1>
+		<p>Bangalore is a silicon city</p>
+		<button>Get Price</button>
+	</div>
+</body>
+</html>

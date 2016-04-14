@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("h1").on("click",function(){//1
+			alert("h1 clicked");
+		});
+		$("p").on("click",function(){//2
+			alert("p clicked");
+			$("h1").trigger("click");//3
+		});
+		$("em").on("newevent",function(){//4
+			alert("this is new event");
+		});
+		$("em").trigger("newevent");//5
+	});
+	</script>
+</head>
+<body>
+	<h1>This is a header</h1>
+	<p>This is a paragraph</p>
+	<em>Some emphaized text</em>
+</body>
+</html>

@@ -1,0 +1,65 @@
+internal project
+
+2weeks
+brad green manager
+
+failed
+3 weeks
+
+internally for 2 yrs, released in oct 2010
+
+
+advantages
+---------
+easy to organise
+testable code
+two way binding (more productive)
+templates are just html
+data structures are just javascript.  ruby, jhango, node, closure scrpt, json!
+
+easy to write, easy to test, 
+
+feeling
+-----
+this is unlike anything i have seen
+this is amazing
+what is going on here
+whats happening?
+my world has been turned upside down in best possible way
+refesh my resume
+i quit
+OMG best framework ever
+
+big pic
+------
+module - defines how the app behaves
+
+service - defines how u interact with rest of the application. extends a controller, 
+
+view, scope, controller - work closely to handle layout, and interaction from user standpoint
+
+directives are used to extend views
+
+----------------
+$compile service - when the page loads, its only a html page that the angular js then takes over and converts to an angular application. the Scompile service goes through the dom structure and identify angularjs components, then compiles and injects the scope components into them  and the templates 
+
+html > static dom > dom content loaded event > ng-app> searches the angular objs > recompiles html > injects scope = angular js app
+
+
+
+2 way data binding
+$digest cycle - monitoring, when something changes, a digest cycle is executed > checks all the values and fn, compares the current result with new result > if something has changes.. fires a apply fun to update
+
+$apply()
+
+
+MV WHATEVER
+
+MVVM 
+view > html bound to Vm (scope n controller ) it updates the view which can update the model i.e scope and model
+
+
+
+
+
+

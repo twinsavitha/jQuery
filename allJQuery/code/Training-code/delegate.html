@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$("#add").on("click",function(){
+			var html = $("<button class='alert'>alert</button>");
+			$("#container").append(html);
+		});
+		$("#container").on("click",".alert",function(){
+			alert(1);
+		});
+		/*
+		$("#container .alert").on("click",function(){
+			alert(1);
+		});
+		*/
+	});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<button id="add">Add new alert</button>
+		<button class="alert">alert</button>
+	</div>
+</body>
+</html>

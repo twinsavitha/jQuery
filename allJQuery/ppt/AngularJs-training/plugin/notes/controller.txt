@@ -1,0 +1,86 @@
+Controllers and $scope
+Building ur first controller
+Methods and prop on $scope
+routes with controllers
+------
+
+
+drives the view.. essentially the logic and behaviour that the user sees is driven by the controller..
+
+controller 
+
+$scope is the glue between the controller and the view. data binded mechanism for the view to be updated by controll and issue commands back to the controller
+
+the controller is responsible for setting up properties on the scope to bind to the view as well as methods for the view to then call those methods back on the scope object.  
+
+and methods on the sc constructing the model on the &scope and providing commands for the view to act upon.
+
+$scope provides context. eg ng-repeat x data in the array, i am creating an item for each item in the array. we get a new scope object and each item knows what scope object it is dealing with.
+{{value}} the controller provides the context so that it makes sense and displays and appropriate value.
+
+$rootscope is the topmost scope object with all other children $scope objects prototypically inheriting from it.
+
+****
+best practice...not store info variables methods on the rootscope.. equivalent to global object.. messy leaky code... actually used as a EVENT bus (services).... never use it... rare case is if u want to communicate between controllers. try to put methods and properties on the scope provided to u. the injection to the controller.
+
+controller (imperative behaviour eg submit form)> scope> view (declarative view)... scope is the glue for communication. 
+
+--------------------
+methods and properties on $scope
+when props are added to $scope, they are available for binding with the view.
+when methods are added to teh $scope, they are available to be called from the view. 
+
+angularJS also allows u to bind to methods as well as simple values.
+
+scope.value=something >> {{value}}
+
+button ng-click="submit()"
+
+scope.submitform = function()
+{
+
+}
+
+///// data binding the result of a method.
+
+scope.getname = function()
+{
+return name
+}
+
+{{getname()}}
+
+----------------------
+routes with controllers
+route and route providers.. add controllers and connect them to the views
+
+routes.. state of the url
+
+$route provides deep- linking to specific states of your application based on the url. 
+
+eg; when u click a user.. the url changes and displays the details of the user. someone may wanna copy the link.. we want to go straight to that page.. deep linking.. 
+
+$routeProvider to define routes in ur application. 
+ngRoute sub module. 
+
+routes work with the view controller combo with the view being loaded into the ngView declaration.
+
+URL variables are passed to the controller through the $routeParams
+
+//
+config block executes when the app is leading.. not running.. so perfect place to define routes constansts, configs....
+
+# bang url
+
+-----------
+review
+controller & scope set the interactivity & properties for the view to display and act upon based on the user input. it helps logic 
+to make props and methods available the vie.. simply define on scope....
+
+scope.method name = fun () {};
+
+showing how to use controller with views with routes..helps make the basic trappings of a webpage. 
+
+
+
+

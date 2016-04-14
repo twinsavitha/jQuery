@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>jQuery</title>
+        <meta name="description" content="Presentation for RWD">
+        <meta name="author" content="Nikhil AM">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <link rel="stylesheet" href="css/main.css">
+
+        <link rel="stylesheet" href="css/reveal.min.css">
+        <link id="theme" rel="stylesheet" href="css/custom.css">        
+
+        <link rel="stylesheet" href="js/lib/css/zenburn.css">
+
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="reveal">
+            <div class="slides">
+                <section><!-- 1 -->
+                    <header>
+                        <img src="img/jquery.png" alt="jQuery Logo">
+                        <h2>jQuery</h2>
+                    </header>
+                </section>
+                <section>
+                    <section>
+                        <header>
+                            <h3>Introduction</h3>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>What&nbsp;&nbsp;is&nbsp;&nbsp;jQuery?</h4>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>What&nbsp;&nbsp;can&nbsp;&nbsp;jQuery&nbsp;&nbsp;do?</h4>
+                        </header>
+                        <figure>
+                                <img src="image/jquery_do.png" border =none;>
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>How&nbsp;&nbsp;to&nbsp;&nbsp;get&nbsp;&nbsp;jQuery?</h4>
+                        </header>
+                        <figure>
+                            <img src="image/get_jquery.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                </section> <!-- 1 end-->
+
+                
+
+                <section> <!-- 3 -->
+                    <section>
+                        <header>
+                            <h4>The&nbsp;&nbsp;DOM</h4>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>The&nbsp;&nbsp;DOM</h3>
+                        </header>
+                        <figure>
+                                <img src="image/html_document.png" alt="SizzleJS" style="float:left;margin-left: -80px;margin-top: 100px;"><img src="image/dom.png" alt="SizzleJS" style="margin-left: 120px;margin-top: 30px;">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Interact&nbsp;&nbsp;with&nbsp;&nbsp;DOM</h3>
+                        </header>
+                        <figure>
+                                <img src="image/jsdom.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>The&nbsp;&nbsp;Big&nbsp;&nbsp;Picture</h3>
+                        </header>
+                        <figure>
+                                <img src="image/bigpicture.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Why&nbsp;&nbsp;jQuery?</h3>
+                        </header>
+                        <figure>
+                                <img src="image/jsbrowser.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>With&nbsp;&nbsp;jQuery</h3>
+                        </header>
+                        <figure>
+                                <img src="image/jquerybrowser.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                </section><!-- 3 end -->
+
+                <section> <!-- 4 -->
+                    <section>
+                        <header>
+                            <h3>Access&nbsp;&nbsp;DOM&nbsp;&nbsp;using&nbsp;&nbsp;jQuery</h3>
+                        </header>
+                        <ul>
+                            <li>
+                                <pre class="javascript"><code style="width: 500px;">
+    $(document).ready(function(){
+        ...
+    });
+                                 </code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Find&nbsp;&nbsp;Elements</h3>
+                        </header>
+                        <figure>
+                                <img src="image/findelements.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Get&nbsp;&nbsp;Content</h3>
+                        </header>
+                        <figure>
+                                <img src="image/getcontent.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Set&nbsp;&nbsp;Content</h3>
+                        </header>
+                        <figure>
+                                <img src="image/setcontent.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                </section> <!--  4 end -->
+
+                <section> <!-- 2 -->
+                    <header>
+                        <h3>jQuery().ready();</h3>
+                    </header>
+                    <figure>
+                        <img src="image/ready.png" alt="SizzleJS">
+                    </figure>
+                </section> <!-- 2 end -->
+
+                <section> <!-- 5 -->
+                    <section>
+                        <header>
+                            <h3>Traversing&nbsp;&nbsp;the&nbsp;&nbsp;DOM</h3>
+                        </header>
+                        <figure>
+                                <img src="image/traverse.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                </section> <!--  5 end -->
+                <section> <!-- 6 -->
+                    <section>
+                        <header>
+                            <h3>Add&nbsp;&nbsp;elements&nbsp;&nbsp;to&nbsp;&nbsp;DOM</h3>
+                        </header>
+                        <figure>
+                                <img src="image/append.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Remove&nbsp;&nbsp;elements&nbsp;&nbsp;from&nbsp;&nbsp;DOM</h3>
+                        </header>
+                        <figure>
+                                <img src="image/remove.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                </section> <!--  6 end -->
+                <section> <!-- 7 -->
+                    <section>
+                        <header>
+                            <h3>Events</h3>
+                        </header>
+                        <figure>
+                                <img src="image/delegate.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Types&nbsp;&nbsp;of&nbsp;&nbsp;Events</h3>
+                        </header>
+                        <figure>
+                                <img src="image/typesevents.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Event&nbsp;&nbsp;Delegation</h3>
+                        </header>
+                    </section>
+                </section> <!--  7 end -->
+                <section> <!-- 8 -->
+                    <section>
+                        <header>
+                            <h3>Class&nbsp;&nbsp;Manipulation</h3>
+                        </header>
+                        <figure>
+                                <img src="image/classmanipulation.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                </section> <!--  8 end -->
+                <section> <!-- 9 -->
+                    <section>
+                        <header>
+                            <h3>jQuery&nbsp;&nbsp;Effects</h3>
+                        </header>
+                        <figure>
+                                <img src="image/effects.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Animate</h3>
+                        </header>
+                        <figure>
+                                <img src="image/animate.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                </section> <!--  9 end -->
+                <section> <!-- 10 -->
+                    <section>
+                        <header>
+                            <h3>AJAX</h3>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Without&nbsp;&nbsp;AJAX</h3>
+                        </header>
+                        <figure>
+                                <img src="image/withoutajax.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>With&nbsp;&nbsp;AJAX</h3>
+                        </header>
+                        <figure>
+                                <img src="image/withajax.png" alt="SizzleJS">
+                        </figure>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>AJAX&nbsp;&nbsp;</h3>
+                        </header>
+                        <pre class="javascript"><code>
+$.ajax(url,{
+
+    type        : "Default: GET|POST|PUT|DELETE",
+
+    dataType    : "html|json|xml",
+
+    success     : function(data){
+        console.log("Successful Request");
+    },
+
+    error       : function(data){
+        console.log("Oops!! Something went wrong");
+    },
+
+    beforeSend: function(){
+        console.log("Executed before the ajax request");
+    },
+
+    complete    : function(){
+        console.log("Executed when the call is completed");
+    }
+});
+                        </code></pre>
+                    </section>
+                    <section>
+                        <header>
+                            <h3>JSON&nbsp;&nbsp;</h3>
+                        </header>
+                         <pre class="javascript"><code>
+{
+    "id":7,
+    "name":"Three",
+    "title":"Third post",
+    "created_at":"2016-03-15T12:07:59.630Z",
+    "updated_at":"2016-03-15T12:07:59.630Z"
+}    
+                        </code></pre>
+
+                    </section>
+                    
+                </section> <!--  10 end -->
+                <section>
+                    <header>
+                        <h4>Plugins&nbsp;&nbsp;</h4>
+                    </header>
+                </section>
+
+
+
+
+<!--
+                <section>
+                    <section>
+                        <header>
+                            <h4>How&nbsp;&nbsp;to&nbsp;&nbsp;unbind&nbsp;&nbsp;events?</h4>
+                        </header>
+                        <ul>
+                            <li>
+                                <p>Unbind All</p>
+                                <pre class="javascript"><code>
+$('form').off();
+                                </code></pre>
+                            </li>
+                            <li>
+                                <p>Unbind Specific Events</p>
+                                <pre class="javascript"><code>
+$('form').off('submit');
+                                </code></pre>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            
+                <section>
+                    <section>
+                        <header>
+                            <h3>Cross&nbsp;&nbsp;Domain&nbsp;&nbsp;Requests</h3>
+                        </header>
+                    </section>
+                    <section>
+                        <header>
+                            <h4>CDR Options</h4>
+                        </header>
+                        <ul>
+                            <li>JSON-P</li>
+                            <li>CORS(Cross-Origin Resource Sharing)</li>
+                        </ul>
+                    </section>
+                </section>
+-->                
+                <section>
+                    <header id="text" class="shot">
+                        <h1>Q</h1>
+                    </header>
+                    <header  id="shooter" class="shot">
+                        <h1>j</h1>
+                    </header>
+                </section>
+            </div>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/lib/js/head.min.js"></script>
+        <script type="text/javascript" src="js/vendor/reveal.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

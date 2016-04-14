@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-2.1.3.js"></script>
+    <!-- Flight details slide down -->
+    <script>
+     $(document).ready(function(){
+        $('.confirmation').on('click', 'button', function(){
+            $(this).closest('.confirmation').find('.ticket').slideDown();
+        });
+    });
+    </script>
+</head>
+	<body>
+			<div class = 'vacation' data-price='399.99'>
+				<p> 399.99 per ticket</p>
+        				<li class = "confirmation">
+                            <h3> Hawaiian </h3>
+                            <button> FLIGHT DETAILS </button>
+                            <ul class = "ticket" style = "display:none;">
+                                <li> Destination : Hyderabad</li>
+                                <li> Depart Date : 23.06.2015</li>
+                                <li> Flight Number : 815</li>
+                            </ul>
+                        </li>
+
+			</div>
+
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--    Shows an example with element, ID, class selectors, on, one -->
+<script src="jquery-2.1.3.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("button").on("click", function(){
+        var price = $('<p>From $399.99</p>');
+        $(".vacation").append(price);
+        $('button').remove();
+    });
+});
+</script>
+</head>
+<body>
+ 		<li class="vacation">
+            <h3>Hawaiian Vacation</h3>
+            <button>Get Price</button>
+            <ul class = "comments">
+                <li>Amazing Deal!</li>
+                <li>Want to go!</li>
+            </ul>
+        </li>
+
+
+</body>
+</html>
+
+
+    
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!--  fadeIn (display:none, is removed),fadeOut(display:none, is inserted),
+fadeToggle(toggle btw in and out),fadeTo (to fade to particular opacity)   -->
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#div2").fadeOut("slow");
+        $("#div3").fadeIn("slow");
+        $("#div4").fadeToggle("slow");
+        $("#div5").fadeTo("slow", 0.2);
+    });
+});
+</script>
+</head>
+<body>
+
+<p>Demonstrate fadeIn() with different parameters.</p>
+<button>Click to fade in boxes</button><br><br>
+
+<div id="div2" style="width:80px;height:80px;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div><br>
+<div id="div4" style="width:80px;height:80px;background-color:red;"></div>
+<div id="div5" style="width:80px;height:80px;background-color:black;"></div>
+
+</body>
+</html>
+

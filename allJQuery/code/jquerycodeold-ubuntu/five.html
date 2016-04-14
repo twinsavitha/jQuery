@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-2.1.3.js"></script>
+<!--  Slidedown, Slideup, Slidetoggle  -->
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+    });
+    $("#flipp").click(function(){
+        $("#panel").slideUp("slow");
+    });
+    $("#flippp").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+});
+</script>
+ 
+<style> 
+#panel, #flip, #flipp, #flippp {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#panel {	
+    padding: 50px;
+    display: none;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>
+<div id="flipp">Click to slide up panel</div>
+<div id="flippp">Click to Toggle the panel</div>
+
+</body>
+</html>

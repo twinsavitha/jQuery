@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-2.1.3.js"></script>
+		<script>
+				$(document).ready(function(){
+				    $("#one").click(function(){
+				        $("#div1").load("demo.txt");
+				    });
+				    $("#two").click(function(){
+				        $("#div2").load("demo.txt #p1");
+				    });
+				    $("#three").click(function(){
+				        $("#div3").load("demooo.txt", function(response, status, xhr){
+				        	console.log("response");
+				        	//console.log(response);
+				        	console.log("status");
+				        	console.log(status);
+				        	console.log("xhr");
+				        	console.log(xhr);
+				            if(status == "success")
+				                alert("External content loaded successfully!");
+				            if(status == "error")
+				                alert("Error: " + xhr.status + ": " + xhr.statusText);
+				        });
+				    });
+					});
+		</script>
+	</head>
+	<body>
+
+		<div id="div1"><h2>To load from demo.txt</h2></div>
+		<div id="div2"><h2>To load oly p elem from demo.txt</h2></div>
+		<div id="div3"><h2>To load oly p elem from demooo.txt n show if succeded o not</h2></div>
+
+		<button id = "one">Get1</button>
+		<button id = "two">Get2</button>
+		<button id = "three">Get3</button>
+
+	</body>
+</html>

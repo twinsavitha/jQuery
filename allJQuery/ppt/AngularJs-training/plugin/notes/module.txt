@@ -1,0 +1,62 @@
+starting point of application
+
+use to define services, controllers, directives, config, across the app
+
+define and apply behaviour to the application during bootstrapping process. 
+
+
+
+config block : tells abt the constants, the providers, services
+
+run blocks : use instances of the providers
+
+ng-app = module name
+
+
+-------
+dependency injection
+
+resolve dependencies within the application.
+
+app giving a value u need.  eg function accepting a parameter value.. to operate on in.
+
+--------
+ module.constant 
+allows to reg a constant service in the module. used for storing configuration or application wide variable that do not change. eg templates path wont really change.. 
+---------
+module array suntax
+
+angular tries to implicitly resolve dep based on params set on the service.
+
+on minification.. falls apart..
+
+best practice.. explicitly defining the syntax
+.run(['VERSION', '$rootScope', function(VERSION,$rootScope) {
+	alert(VERSION);
+}]);
+
+maintain order
+----
+module.run
+used to execute system wide code that oly needs to be run once
+
+initialised and run
+----
+review
+
+used to define the behaviour for ur application.
+we reference our module using ng-app=module name
+
+now module available to app
+
+config block : constants and services to be made availabel to the applicaiton which is not yet instanttiated.
+
+
+run block: access those services that have been defined. eg the version constant service.
+
+uses dep injection to supply us the dep to perform operation in a service. and supplied to module.run block.. 
+
+implicity figures out the dep based on param signature. but minifiers will often rename.. thus use array syntax.
+
+
+

@@ -1,0 +1,55 @@
+.main{
+	background: #c9ac75;
+	width: 70%;
+	margin: 10px;
+	padding: 5px;
+	float: left;
+}
+
+.side-section{
+	background: #d09d3b;
+	width: 20%;
+	margin: 5px;
+	padding: 5px;
+	float: right;
+}
+
+@media all and (min-width: 990px) {
+	body{
+		background: #999;
+	}
+}
+
+@media all and (max-width: 990px) and (min-width: 670px){
+	body{
+		background: #ccc;
+	}
+
+	.main{
+		background: #e57e34;
+	}
+
+	.side-section{
+		background: #efd273;
+	}
+}
+
+@media all and (max-width: 670px){
+	body{
+		background: #fff;
+	}
+
+	.main{
+		background: #1b88cd;
+	}
+
+	.side-section{
+		background: #358e82;
+	}
+	.main, .side-section{
+		color: #fff;
+		width: 95%;
+		margin: 10 auto;
+		float: none;
+	}
+}

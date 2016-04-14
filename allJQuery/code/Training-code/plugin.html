@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script>
+	$.fn.getprice = function(){
+			$(this).on("click","button",function(){
+				var amount = $(this).parent();
+				console.log(amount.data("price"));
+				var price = amount.data("price");
+				$(this).after(price);
+				$(this).remove();
+			});	
+	};
+	$(document).ready(function(){
+		$(".one").getprice();
+		$(".two").getprice();
+		$(".three").getprice();
+	});
+	</script>
+</head>
+<body>
+	<div class="one" data-price="499.0">
+		<h1>Bangalore Vacation</h1>
+		<p>Bangalore is a silicon city</p>
+		<button>Get Price</button>
+	</div>
+	<div class="one" data-price="599.0">
+		<h1>Mumbai Vacation</h1>
+		<p>Mumbai is a silicon city</p>
+		<button>Get Price</button>
+	</div>
+	<div class="two" data-price="699.0">
+		<h1>Delhi Vacation</h1>
+		<p>Delhi is a silicon city</p>
+		<button>Get Price</button>
+	</div>
+	<div class="three" data-price="799.0">
+		<h1>chennai Vacation</h1>
+		<p>chennai is a silicon city</p>
+		<button>Get Price</button>
+	</div>
+</body>
+</html>

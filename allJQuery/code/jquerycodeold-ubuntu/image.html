@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<script src="jquery-2.1.3.js"></script>-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="jQuery.jTableCheckbox.min.js"></script>
+		<script>
+				$(document).ready(function(){
+				    $('#uploadbox').singleupload({
+				        action: 'do_upload.php', //action: 'do_upload.php'
+				        inputId: 'singleupload_input',
+				        onError: function(code) {
+				            console.debug('error code '+res.code);
+				        }
+				        /* ,onSucess: function(url, data) {} */
+				        /*,onProgress: function(loaded, total) {} */
+				    });
+	
+					});
+		</script>
+		<style>
+				.singleupload {
+				    background: yellow;
+				    border:1px solid #ccc;
+				    text-align: center;
+				    width: 92px;
+				    height: 92px;
+				    line-height: 92px;
+				}
+		</style>
+	</head>
+	<body>
+
+
+		<div id="uploadbox" onClick="singleupload_input.click();" class="singleupload"></div>
+		<input type="file" id="singleupload_input" style="display:none;" name="img" value=""/>
+
+	</body>
+</html>

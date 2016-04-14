@@ -1,0 +1,66 @@
+directives
+directive definition object
+link function
+controller function
+
+--
+directives are basically custom html tags or elements that allow u to perform custom functionality. 
+
+----
+
+directives definition object
+a directives has three things
+link
+controller
+DDO - directive definition object : tells the compiler how a directive is supposed to be assembeled. 
+ common properties are the link function, controller function, restrict, replace, template and templateUrl
+
+replace: tells angular to replace the DOM element that the directive is defined upon. for eg.. if we hav the directive on a div and we want to replace it with an input tag.. 
+
+Restrict:
+restricts the definition of the directive (default is attribute) (ECMA for ECMA script)
+E - Element
+C - Class
+M - Comment
+A - Attribute
+
+*****IMPORTANT****
+when making ur own directives... in the js file use camel casing.. but in tht html code.. use snake casing..
+
+.directive('myRectangle',function() {
+	return { 
+		templateURL : ,
+		restrict: 'E',
+		replace: true
+		};
+});
+
+<my-rectangle>M/my-rectangle>
+*************************
+
+Template URL
+Replace the current contents of the DOM element with the content of the templated loaded from teh templateUrl. 
+-------
+
+The link function
+
+In angularJS it is frowned upon if ur controller directly changes the DOM. 
+
+The link function is where the DOM manupulation happens.
+The link function comes with scope, element and attrs. attrs are the params set into the link function. 
+
+scope is same as $scope in the controller function.
+
+element is a jQuery instance of the DOM element the direcive is declared on. Angular is shipped witha jQuery version called JQlite.. simplified version used for DOM clearing. 
+
+attrs is a list of attributes declared on the element. 
+
+----
+
+controller functions. 
+the controller constructed during the pre-linking phase recieves the $scope which is the current scope for the element.
+
+-- review
+
+
+

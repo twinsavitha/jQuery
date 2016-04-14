@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="jquery-2.1.3.js"></script>
+<!-- Hide, Show, toggle  -->
+<script>
+$(document).ready(function(){
+    $("#first").click(function(){  
+        $("p").hide();  			
+    });
+    $("#second").click(function(){
+        $("p").show();
+    });
+    $("#third").click(function(){
+        $("h4").toggle();
+    });    
+});
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<h4>This is a paragraph.</h4>
+
+<button id = "first">Hide</button>
+<button id = "second">Show</button>
+<button id = "third">Toggle</button>
+
+</body>
+</html>
